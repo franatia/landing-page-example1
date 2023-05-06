@@ -17,7 +17,7 @@
   --title-color: hsl(var(--hue-color), 8%, 15%);
   --text-color: hsl(var(--hue-color), 8%, 45%);
   --text-color-light: hsl(var(--hue-color), 8%, 65%);
-  --input-color: hsl(var(--hue-color), 70%, 96%);
+  --input-color: hsl(var(--hue-color), 70%, 92%);
   --body-color: hsl(var(--hue-color), 60%, 99%);
   --container-color: #fff;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
@@ -165,7 +165,7 @@ img {
 /*==================== LAYOUT ====================*/
 
 .container {
-  max-width: 768px;
+  max-width: 820px;
   margin-left: var(--mb-1-5);
   margin-right: var(--mb-1-5);
 }
@@ -285,6 +285,11 @@ img {
   grid-template-columns: 0.5fr 3fr;
   padding-top: 3.5rem;
   align-items: center;
+}
+
+.home__img img{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .home__social {
@@ -410,7 +415,7 @@ img {
 
 /*==================== ABOUT ====================*/
 .about__img {
-  width: 200px;
+  width: 300px;
   border-radius: 0.5rem;
   justify-self: center;
   align-items: center;
@@ -425,6 +430,10 @@ img {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: var(--mb-2-5);
+}
+
+.about__info__item{
+  margin: 0 10px 0 10px;
 }
 
 .about__info-title {
@@ -985,7 +994,7 @@ img {
 /*========== SCROLL UP ==========*/
 .scrollup {
   position: fixed;
-  right: 1rem;
+  right: 1.48rem;
   bottom: -20%;
   background-color: var(--first-color);
   opacity: 0.8;
@@ -1006,7 +1015,39 @@ img {
 
 /* Show scroll */
 .show-scroll {
+  bottom: 3rem;
+}
+
+/* ============ WHATSAPP BUTTON ============*/
+.wpp-button{
+  position: fixed;
+  right: 1rem;
   bottom: 5rem;
+  background-color: rgb(34, 212, 72);
+  padding: 0 0.3rem;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: var(--z-tooltip);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.wpp-button-up{
+  bottom: 7rem;
+}
+
+.wpp-button a{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wpp-button i{
+  color: #fff;
+  font-size: 20px;
 }
 
 /*========== SCROLL BAR ==========*/
@@ -1203,7 +1244,7 @@ img {
       column-gap: 5rem;
     }
     .about__img {
-      width: 350px;
+      width: 450px;
     }
     .about__description {
       text-align: initial;

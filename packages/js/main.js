@@ -168,9 +168,16 @@ window.addEventListener("scroll", scrollHeader);
 /*==================== SHOW SCROLL UP ====================*/
 function scrollUp() {
   const scrollUp = document.getElementById("scroll-up");
+  const wppButton = document.querySelector(".wpp-button");
   // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
-  if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
-  else scrollUp.classList.remove("show-scroll");
+  if (this.scrollY >= 560){
+    scrollUp.classList.add("show-scroll");
+    wppButton.classList.add('wpp-button-up');
+  }
+  else{
+    scrollUp.classList.remove("show-scroll");
+    wppButton.classList.remove('wpp-button-up');
+  };
 }
 window.addEventListener("scroll", scrollUp);
 
