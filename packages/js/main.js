@@ -29,6 +29,16 @@ function linkAction() {
 }
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
+/*==================== INPUT RANGE COLOR ===================*/
+const _cssRoot = document.querySelector(':root');
+const inputRangeColor = document.getElementById('input-range-color');
+inputRangeColor.value = parseInt(_cssRoot.style.getPropertyValue('--hue-color'));
+
+inputRangeColor.addEventListener('input', e=>{
+  let value = e.target.value;
+ _cssRoot.style.setProperty('--hue-color', parseInt(value));
+})
+
 /*==================== ACCORDION SKILLS ====================*/
 const skillsContent = document.getElementsByClassName("skills__content"),
   skillsHeader = document.querySelectorAll(".skills__header");
